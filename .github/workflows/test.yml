@@ -1,0 +1,17 @@
+name: Test Azure Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lihat spesifikasi runner
+        run: |
+          echo "RAM:"
+          free -h
+          echo "CPU:"
+          lscpu
+          echo "OS:"
+          cat /etc/os-release
